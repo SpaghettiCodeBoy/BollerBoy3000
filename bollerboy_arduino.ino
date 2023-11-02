@@ -33,6 +33,7 @@ void loop() {
  
   } else {
     // If the controller is not connected, set the servo to no speed
+    // This is a super duper security feature, do not remove loool
     servoPosition = no_speed_pos;
   }
 
