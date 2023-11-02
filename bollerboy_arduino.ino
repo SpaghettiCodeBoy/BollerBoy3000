@@ -24,11 +24,12 @@ void loop() {
     // Read the controller input (0 to 127)
     controller_input = PS4.LStickY();
 
-    // Map the controller input to the servo position
+    // Dead Zone of the Controller
     if(controller_input < 10){
       controller_input = 0;
     }
     
+    // Map the controller input to the servo position
     servoPosition = map(controller_input, 0, 127, no_speed_pos, max_speed_pos);
  
   } else {
